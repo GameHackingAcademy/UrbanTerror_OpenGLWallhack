@@ -2,7 +2,7 @@
 A wallhack for Urban Terror 4.3.4 that reveals entities through walls by hooking the game's OpenGL function "glDrawElements" and disabling
 depth-testing for OpenGL.
 
-This is done by location the glDrawElements function inside the OpenGL library and creating a codecave at the start of the function. In the codecave, 
+This is done by locating the glDrawElements function inside the OpenGL library and creating a codecave at the start of the function. In the codecave, 
 we check the amount of vertices associated with the element. If it is over 500, we call glDepthRange to clear the depth clipping plane and glDepthFunc to 
 disable depth testing. Otherwise, we call these same functions to re-enable the depth clipping plane and re-enable depth testing.
 
