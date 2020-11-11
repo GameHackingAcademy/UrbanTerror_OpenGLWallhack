@@ -11,6 +11,8 @@ Another way is to enable AppInit_DLLs in the registry.
 
 The offsets and method to discover them are discussed in the article at: https://gamehacking.academy/lesson/23
 */
+#include <Windows.h>
+
 HMODULE openGLHandle = NULL;
 
 // Function pointers for two OpenGL functions that we will dynamically populate
